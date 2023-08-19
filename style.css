@@ -21,11 +21,9 @@ header{
     padding:20px 2vw;
     color:white;
 }
-div{
-    margin-left: 3vw;
-}
-#form button{
-    padding: 10px;
+
+#submitButton{
+    padding: 10px 0px;
     width: 35vw;
     text-align: center;
     margin-top: 40px;
@@ -50,12 +48,11 @@ div{
     color: white;
 }
 .reset-button{
-    padding: 15px 30px;
+    padding: 15px 30px !important;
     color: black;
     background-color: white;
     border: none;
     background-color: rgb(150, 85, 194);
-    width: 8%;
     font-weight: bold;
     font-size: large;
     border-radius: 3px;
@@ -75,6 +72,7 @@ table {
     border-collapse: collapse;
     width: 90vw;
     margin-left: 3vw;
+    margin-bottom: 40px;
 }
   
 th, td {
@@ -91,6 +89,25 @@ th{
 .delete-button{
     background-color: black;
     border: none;
+}
+
+.form .col-md-4,
+.form .col-md-6 {
+  margin: 5px 0px;
+}
+
+.form .form-control {
+  padding: 5px; 
+}
+form{
+    padding: 0px 60px;
+    box-sizing: border-box !important;
+}
+
+@media  (max-width: 850px) {
+    .search-section input{
+        width: 60vw;
+    }
 }
 
 

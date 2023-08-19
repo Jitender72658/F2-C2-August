@@ -2,7 +2,9 @@
 const students = []; 
 let id= 1;
 let addingPossible = true;
-displayStudents(students);
+const submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', addStudent);
+displayStudents(students,);
 function addStudent(){
     if(!addingPossible){
          displayStudents(students);
@@ -49,7 +51,7 @@ function displayStudents(studentData){
         let tableDataDegree = document.createElement('td');
         let degreeDiv = document.createElement('div');
         let degreeText= document.createElement('p');
-        degreeText.style.marginTop="9px"
+        degreeText.style.marginTop="10px"
         degreeText.innerText=currStudentData.degree;
 
         let modificationButtonDiv = document.createElement("div");
@@ -75,21 +77,24 @@ function displayStudents(studentData){
 
 }
 
-function resetData(){
-    console.log("data reseted successfully");
-    displayStudents(students);
-}
 
-const searchInput = document.getElementById('search');
-searchInput.addEventListener('keydown',function(){
+const searchInput = document.getElementById('searchContainer');
+searchInput.addEventListener('input',function(){
     filterData();
 })
+
+function resetData(){
+    displayStudents(students);
+    searchInput.value = "";
+    
+}
 function filterData(){
-    let searchValue = document.getElementById('search').value.toLowerCase();
+    let inputValue = document.getElementById('searchContainer').value;
+    const regexPattern = new RegExp(`${inputValue}`,"i");
     let filteredData = [];
     for(let i = 0;i<students.length;i++){
         const currStudentValue= students[i];
-        if(currStudentValue.name.toLowerCase()==searchValue || currStudentValue.degree.toLowerCase()==searchValue || currStudentValue.email.toLowerCase()== searchValue){
+        if(regexPattern.test(currStudentValue.name) || regexPattern.test(currStudentValue.email) || regexPattern.test(currStudentValue.degree)){
             filteredData.push(currStudentValue);
         }
     }
@@ -122,14 +127,14 @@ function editStudent(editId){
    document.getElementById('age').value = studentToBeEdited.age;
    document.getElementById('gpa').value = studentToBeEdited.grade;
    document.getElementById('degree').value = studentToBeEdited.degree;  
-   const submitButton = document.getElementById('submitButton');
    submitButton.innerText = "Modify Student";
    addingPossible=false;
-   submitButton.addEventListener('onclick',function(){
+   submitButton.addEventListener('click',function(event){
+    event.preventDefault();
      modifyStudent(studentToBeEdited.ID);
      submitButton.innerText = "Add Student";
+     formData.reset();
      addingPossible= true;
-     displayStudents(students);
    })
 }
 
@@ -148,5 +153,5 @@ function modifyStudent(modifyId){
     modifiedStudent["age"] = document.getElementById('age').value;
     modifiedStudent["grade"] = document.getElementById('gpa').value;
     modifiedStudent["degree"] =document.getElementById('degree').value;
-    console.log(modifiedStudent);
+    displayStudents(students);
 }
