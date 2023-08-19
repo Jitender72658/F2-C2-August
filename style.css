@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Inter:wght@400;600&family=Poppins:wght@300&display=swap');
+body{
+    background-color: black;
+    color: white;
+    font-family: Inter, sans-serif;
+}
+header{
+    margin-top: 70px;
+    margin-left: 3vw;
+}
+input{
+    width: 26%;
+    margin: auto;
+    background-color: black;
+    height: 40px;
+     margin: 15px 30px 15px 0px; 
+    border: 1px solid white;
+    padding-left: 20px;
+    color:white;
+}
+div{
+    margin-left: 3vw;
+}
+#form button{
+    padding: 10px 90px;
+    width: 35vw;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.search-section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 3vw;
+}
+.search-section input{
+    width: 90vw;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90vw;
+    margin-left: 3vw;
+}
+  
+th, td {
+    border: 1px solid white; 
+    padding: 8px;
+}
+
+
+
+ 
+
+
+
+
+
+
+
