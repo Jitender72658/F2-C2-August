@@ -5,41 +5,70 @@ body{
     font-family: Inter, sans-serif;
 }
 header{
-    margin-top: 70px;
+    margin-top: 50px;
     margin-left: 3vw;
 }
-input{
-    width: 26%;
-    margin: auto;
+.form{
+    width: 100% !important;
+}
+.form input{
+    width: 100%;
     background-color: black;
-    height: 40px;
-     margin: 15px 30px 15px 0px; 
+    height: 45px;
     border: 1px solid white;
-    padding-left: 20px;
+    border-radius: 0px !important;
+    margin: 15px 0px;
+    padding:20px 2vw;
     color:white;
 }
 div{
     margin-left: 3vw;
 }
 #form button{
-    padding: 10px 90px;
+    padding: 10px;
     width: 35vw;
-    margin-top: 20px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 18px;
     font-weight: bold;
+    border-radius: 3px;
 }
 .search-section{
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 3vw;
+    
 }
 .search-section input{
-    width: 90vw;
+    width: 80vw;
+    font-size: large;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid white;
+    padding:13px 2vw;
+    color: white;
+}
+.reset-button{
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border: none;
+    background-color: rgb(150, 85, 194);
+    width: 8%;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 3px;
+    margin-left: 10px;
 }
 
 input::placeholder,
 textarea::placeholder {
   font-weight: bold;
+  font-size: large;
+  color:rgb(212, 206, 206) !important;
+  opacity: 0.4 !important;
+  
 }
 
 table {
@@ -50,8 +79,20 @@ table {
   
 th, td {
     border: 1px solid white; 
-    padding: 8px;
+    padding: 8px 15px;
 }
+
+.table>img{
+    background-color: black;
+}
+th{
+    text-align: start !important;
+}
+.delete-button{
+    background-color: black;
+    border: none;
+}
+
 
 
 
